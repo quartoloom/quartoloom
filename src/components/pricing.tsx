@@ -1,12 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { cn } from "@/lib/utils";
-import { Check, CurrencyInr, TrendUp } from "@phosphor-icons/react";
+import { Check, TrendUp } from "@phosphor-icons/react";
 import { Sparkle } from "@phosphor-icons/react/Sparkle";
 import React from "react";
-
+import { motion } from "framer-motion";
 type Props = {};
 
 const pricingCards = [
@@ -107,24 +106,62 @@ export function Pricing({}: Props) {
       <div className='[--color:hsl(var(--primary))] pointer-events-none relative -z-[2] mx-auto h-[50rem] overflow-hidden [mask-image:radial-gradient(ellipse_at_center_center,#000,transparent_50%)] my-[-18.8rem] before:absolute before:inset-0 before:h-full before:w-full before:opacity-40 before:[background-image:radial-gradient(circle_at_bottom_center,hsl(var(--primary)),transparent_70%)] after:absolute after:-left-1/2 after:top-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[50%] after:border-t after:border-[hsl(var(--primary)))] after:bg-background'></div>
 
       <div className='mb-10 flex items-center flex-col w-full'>
-        <HoverBorderGradient
-          containerClassName='rounded-full'
-          as='button'
-          className='dark:bg-black bg-background text-primary flex items-center space-x-2'
+        <motion.div
+          initial={{
+            opacity: 0,
+            top: "-100px",
+          }}
+          whileInView={{
+            opacity: 1,
+            top: "0px",
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.2,
+            ease: "easeIn",
+            delay: 0.1,
+          }}
+          className='flex items-center flex-col w-full'
         >
-          <Sparkle />
-          <span>Pricing</span>
-        </HoverBorderGradient>
-        <h2 className='text-center text-4xl font-semibold text-primary mt-5'>
-          Simple pricing for school.
-        </h2>
-        <p className='text-gray-500 text-sm text-center mt-2 mb-16'>
-          Choose an affordable plan that's packed with the best features for
-          managing your school,
-          <br />
-          students, and classrooms.
-        </p>
-        <div className='grid grid-cols-3 gap-5'>
+          <HoverBorderGradient
+            containerClassName='rounded-full'
+            as='button'
+            className='dark:bg-black bg-background text-primary flex items-center space-x-2'
+          >
+            <Sparkle />
+            <span>Pricing</span>
+          </HoverBorderGradient>
+          <h2 className='text-center text-4xl font-semibold text-primary mt-5'>
+            Simple pricing for school.
+          </h2>
+          <p className='text-gray-500 text-sm text-center mt-2 mb-16'>
+            Choose an affordable plan that's packed with the best features for
+            managing your school,
+            <br />
+            students, and classrooms.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{
+            opacity: 0,
+            top: "-100px",
+          }}
+          whileInView={{
+            opacity: 1,
+            top: "0px",
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.5,
+            ease: "easeIn",
+            delay: 0.3,
+          }}
+          className='grid grid-cols-3 gap-5'
+        >
           {pricingCards.map((item) => (
             <div key={item.label}>
               <div
@@ -173,7 +210,7 @@ export function Pricing({}: Props) {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

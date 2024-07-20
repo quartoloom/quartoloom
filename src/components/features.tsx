@@ -7,7 +7,7 @@ import {
   UsersFour,
 } from "@phosphor-icons/react";
 import React, { ReactNode } from "react";
-
+import { motion } from "framer-motion";
 const Skeleton = () => (
   <div className='flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100'></div>
 );
@@ -70,26 +70,64 @@ let cards: {
 export function Features() {
   return (
     <section className='container mx-auto my-[120px]'>
-      <h2 className='text-center text-4xl font-semibold text-primary mt-5'>
-        Here's What We Offer for Your School
-      </h2>
-      <p className='text-gray-500 text-sm text-center mt-2 mb-16'>
-        Explore the essential features designed to streamline operations,
-        enhance communication,
-        <br /> and improve administrative efficiency.
-      </p>
-      <BentoGrid>
-        {cards.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.name}
-            description={item.description}
-            header={item.header}
-            icon={item.icon}
-            className={item.className ? item.className : ""}
-          />
-        ))}
-      </BentoGrid>
+      <motion.div
+        initial={{
+          opacity: 0,
+          top: "-100px",
+        }}
+        whileInView={{
+          opacity: 1,
+          top: "0px",
+        }}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeIn",
+          delay: 0.1,
+        }}
+      >
+        <h2 className='text-center text-4xl font-semibold text-primary mt-5'>
+          Here's What We Offer for Your School
+        </h2>
+        <p className='text-gray-500 text-sm text-center mt-2 mb-16'>
+          Explore the essential features designed to streamline operations,
+          enhance communication,
+          <br /> and improve administrative efficiency.
+        </p>
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 0,
+          top: "-100px",
+        }}
+        whileInView={{
+          opacity: 1,
+          top: "0px",
+        }}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          duration: 0.5,
+          ease: "easeIn",
+          delay: 0.3,
+        }}
+      >
+        <BentoGrid>
+          {cards.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.name}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              className={item.className ? item.className : ""}
+            />
+          ))}
+        </BentoGrid>
+      </motion.div>
     </section>
   );
 }
