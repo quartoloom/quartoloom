@@ -12,12 +12,13 @@ export const Footer = (props: Props) => {
           height={40}
           width={180}
           alt='Compnay Identity'
+          className='md:h-10 md:w-48 !h-6 w-36'
         />
-        <h3 className='text-base font-medium text-gray-500'>
+        <h3 className='font-medium text-gray-500 md:text-base text-xs'>
           Where Education Meets Innovation and Creativity.
         </h3>
       </div>
-      <p className='text-gray-500 text-sm'>
+      <p className='text-gray-500 md:text-sm text-xs'>
         Copyright © 2024 Quartoloom. All Rights Reserved.
       </p>
     </footer>

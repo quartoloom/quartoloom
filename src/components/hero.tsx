@@ -31,7 +31,7 @@ type Props = {};
 export function Hero({}: Props) {
   return (
     <section className=''>
-      <div className='container relative mx-auto mt-44 max-w-[80rem] px-6 text-center md:px-8 z-10'>
+      <div className='container relative mx-auto mt-28 md:mt-44 max-w-[80rem] px-6 text-center md:px-8 z-10'>
         <motion.div
           initial={{
             opacity: 0,
@@ -46,10 +46,9 @@ export function Hero({}: Props) {
             ease: "easeIn",
           }}
         >
-          <h1 className='bg-gradient-to-br dark:from-primary from-primary from-30% dark:to-white/40 to-secondary bg-clip-text py-6 text-4xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-5xl md:text-8xl translate-y-[-1rem] text-center'>
+          <h1 className='bg-gradient-to-br dark:from-primary from-primary from-30% dark:to-white/40 to-secondary bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-5xl lg:text-8xl translate-y-[-1rem] text-center'>
             Revolutionize Your School
-            <br className='hidden md:block' />
-            with Quartoloom.
+            <br className='hidden md:block' /> with Quartoloom.
           </h1>
           <h4 className='mb-12 text-lg tracking-tight text-gray-500 md:text-xl text-balance'>
             A Comprehensive Solution for Administrators, Teachers, Students, and
@@ -76,13 +75,19 @@ export function Hero({}: Props) {
           }}
           className='my-[120px]'
         >
-          <Div className='w-full z-10 relative h-[40rem] after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background)),transparent)] after:rounded-2xl before:absolute before:-bottom-2 before:w-full before:h-10 before:bg-background before:z-[100]'>
-            <Image
+          <Div
+            containerClassName='max-w-[1300px] max-h-[700px] mx-auto'
+            className='w-full h-full z-10 relative after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background)),transparent)] after:rounded-2xl before:absolute before:-bottom-3 before:w-full before:h-12 before:bg-background before:z-[500]'
+          >
+            <img
               src={"/app.png"}
+              className='w-full h-auto rounded-2xl border-[3px] border-gary-300 object-cover'
+            />
+            {/* <Image
               className='w-full h-auto rounded-2xl border-[3px] border-gary-300'
               alt='App preview'
               fill
-            ></Image>
+            ></Image> */}
           </Div>
         </motion.div>
         <motion.div

@@ -9,8 +9,8 @@ type Props = {};
 
 export const ContactUs = (props: Props) => {
   return (
-    <section className='container mx-auto my-[120px]'>
-      <div className='p-10 rounded-2xl from-primary/10 via-primary/05 to-background bg-gradient-to-b w-[70%] mx-auto'>
+    <section className='container mx-auto my-[120px]' id='contact'>
+      <div className='p-10 rounded-2xl from-primary/10 via-primary/05 to-background bg-gradient-to-b md:w-[70%] md:mx-auto w-full'>
         <div className='flex flex-col gap-5 items-center'>
           <motion.div
             initial={{

@@ -51,7 +51,7 @@ let cards: {
         <UsersFour className='size-6 text-primary' />
       </div>
     ),
-    className: "row-span-2",
+    className: "row-span-1 lg:row-span-2",
   },
   {
     name: "Bulk Data Upload and Existing ERP <br/> Integration",
@@ -63,13 +63,13 @@ let cards: {
         <IntersectSquare className='size-6 text-primary' />
       </div>
     ),
-    className: "col-span-2",
+    className: "col-span-1 lg:col-span-2",
   },
 ];
 
 export function Features() {
   return (
-    <section className='container mx-auto my-[120px]'>
+    <section className='container mx-auto my-[120px]' id='features'>
       <motion.div
         initial={{
           opacity: 0,

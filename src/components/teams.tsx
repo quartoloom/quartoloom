@@ -31,6 +31,7 @@ let teams = [
 export function Teams({}: Props) {
   return (
     <motion.section
+      id='teams'
       initial={{
         opacity: 0,
         y: "20px",
@@ -100,7 +101,7 @@ export function Teams({}: Props) {
             once: true,
           }}
         >
-          <div className='grid grid-cols-4 gap-10'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 lg:grid-cols-4'>
             {teams.map((item) => (
               <div
                 key={item.name}
@@ -111,7 +112,8 @@ export function Teams({}: Props) {
                   width={200}
                   height={200}
                   alt={item.name}
-                  className='rounded-full !h-[200px] object-cover'
+                  style={{ borderRadius: "100%" }}
+                  className='!min-h-[200px] !min-w-[200px] object-cover'
                 />
                 <div>
                   <h4 className='text-center font-semibold text-primary'>

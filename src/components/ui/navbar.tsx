@@ -5,30 +5,37 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Button } from "./button";
 import { CalendarIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 let navItems: {
   name: string;
   link: string;
   icon?: JSX.Element;
+  id: string;
 }[] = [
   {
     name: "Home",
     link: "/",
+    id: "#home",
   },
   {
     name: "Team",
     link: "/",
+    id: "#teams",
   },
   {
-    name: "Fetaures",
+    name: "Features",
     link: "/",
+    id: "#features",
   },
   {
     name: "Pricing",
     link: "/",
+    id: "#pricing",
   },
   {
     name: "Connect Us",
     link: "/",
+    id: "#contact",
   },
 ];
 export const Navbar = ({ className }: { className?: string }) => {
@@ -50,7 +57,7 @@ export const Navbar = ({ className }: { className?: string }) => {
         ease: "easeIn",
       }}
       className={cn(
-        "flex fixed inset-x-0 mx-auto rounded-full !transform-none container px-5 backdrop-blur-sm z-[1000]"
+        "flex sticky inset-x-0 mx-auto rounded-full !transform-none container md:px-5 px-0 backdrop-blur-sm z-[1000]"
       )}
     >
       <header className='flex items-center justify-between py-1 h-14  w-full'>
@@ -61,32 +68,26 @@ export const Navbar = ({ className }: { className?: string }) => {
             width={150}
             alt='Compnay Identity'
           />
-          <ul className='flex justify-start items-center gap-4 ml-5'>
+          <ul className='justify-start items-center gap-4 ml-5 md:flex hidden'>
             {navItems.map((item) => (
-              <li
-                aria-label={`${item.name} navigation item`}
-                key={item.name}
-                className={cn(
-                  "cursor-pointer text-sm text-gray-500 hover:text-primary hover:font-semibold",
-                  {
-                    "text-primary font-semibold": selectedItem === item.name,
-                  }
-                )}
-                onClick={() => setSelectedItem(item.name)}
-              >
-                {item.name}
-              </li>
+              <Link key={item.name} href={item.id}>
+                <li
+                  aria-label={`${item.name} navigation item`}
+                  className={cn(
+                    "cursor-pointer text-sm text-gray-500 hover:text-primary hover:font-semibold",
+                    {
+                      "text-primary font-semibold": selectedItem === item.name,
+                    }
+                  )}
+                  onClick={() => setSelectedItem(item.name)}
+                >
+                  {item.name}
+                </li>
+              </Link>
             ))}
           </ul>
         </div>
         <div className='flex justify-end items-center gap-5'>
-          <Button
-            variant={"ghost"}
-            className='rounded-full'
-            aria-label='Register button'
-          >
-            Register
-          </Button>
           <Button className='rounded-full' aria-label='Book a demo button'>
             <CalendarIcon className='mr-2 size-4' />
             Book a Demo

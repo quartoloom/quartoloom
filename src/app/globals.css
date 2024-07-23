@@ -10,9 +10,41 @@
   --secondary: 214 32% 91%;
   --secondary-foreground: 222.2 47.4% 11.2%;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 @layer components {
   .btn-primary {
     @apply py-2 px-5 bg-primary text-primary text-white font-semibold rounded-full flex justify-between items-center gap-2;
+  }
+}
+
+.container {
+  width: 90%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
   }
 }

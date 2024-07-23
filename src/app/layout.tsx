@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     name: "Quartoloom Solutions Ltd",
     url: "https://www.quartoloom.com",
   },
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     title: "Quartoloom - Innovative School Management System",
@@ -45,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
+        <div id='home'></div>
         <Navbar />
         {children}
         <Footer />
