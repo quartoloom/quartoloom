@@ -181,9 +181,9 @@ export function Pricing({}: Props) {
                     {/* {item.icon} */}
                   </div>
                   <div className='flex justify-start items-center gap-4'>
-                    <h6 className='bg-gradient-to-r from-slate-600 to-slate-300 bg-clip-text text-transparent text-4xl font-semibold'>
+                    <p className='bg-gradient-to-r from-slate-600 to-slate-300 bg-clip-text text-transparent text-4xl font-semibold'>
                       {item.price}
-                    </h6>
+                    </p>
                     <span className='!text-gray-400 text-base'>
                       /Student <br /> for a Year
                     </span>
