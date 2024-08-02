@@ -8,9 +8,7 @@ import { Toaster } from "./ui/sonner";
 import { toast } from "sonner";
 import { sendContactUsMail } from "@/app/actions";
 
-type Props = {};
-
-export const ContactUs = (props: Props) => {
+export const ContactUs = () => {
   const [data, setData] = useState({
     name: "",
     lastName: "",

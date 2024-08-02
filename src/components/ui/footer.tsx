@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-export const Footer = (props: Props) => {
+export const Footer = () => {
   return (
     <footer className='flex mx-auto container justify-between items-end mb-5'>
       <div className='flex flex-col'>

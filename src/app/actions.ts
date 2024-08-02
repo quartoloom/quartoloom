@@ -17,7 +17,7 @@ export async function sendContactUsMail(body: any) {
       },
     });
 
-    const mail = await transporter.sendMail({
+    await transporter.sendMail({
       from: `${process.env.EMAIL_HOST_NAME}`,
       to: `${process.env.TO_EMAIL}`,
       subject: `New Contact Form Submission from ${body.name} ${body.lastName} | Quartoloom`,
@@ -100,7 +100,7 @@ export async function sendBookADemo(body: any) {
       },
     });
 
-    const mail = await transporter.sendMail({
+    await transporter.sendMail({
       from: `${process.env.EMAIL_HOST_NAME}`,
       to: `${process.env.TO_EMAIL}`,
       subject: ` New Demo Booking Request from ${body.name} ${body.lastName} | Quartoloom`,

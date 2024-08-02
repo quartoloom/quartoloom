@@ -94,6 +94,8 @@ export function Hero({}: Props) {
               src={"/app.webp"}
               className='w-full h-auto rounded-2xl border-[3px] border-gary-300'
               alt='App preview'
+              loading='lazy'
+              // sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             ></Image>
           </Div>
         </motion.div>
@@ -130,7 +132,6 @@ export function Hero({}: Props) {
                     alt={school.name}
                     width={80}
                     height={80}
-                    className='object-contain '
                   ></Image>
                 </div>
               ))}

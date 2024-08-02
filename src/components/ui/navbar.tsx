@@ -1,10 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Button } from "./button";
-import { CalendarIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { BookAMeeting } from "../book-a-meeting";
 let navItems: {
@@ -39,7 +37,7 @@ let navItems: {
     id: "#contact",
   },
 ];
-export const Navbar = ({ className }: { className?: string }) => {
+export const Navbar = () => {
   const [selectedItem, setSelectedItem] = useState("Home");
 
   return (
