@@ -1,8 +1,16 @@
-import { ContactUs } from "../components/contact-us";
-import { Features } from "../components/features";
+import dynamic from "next/dynamic";
 import { Hero } from "../components/hero";
-import { Pricing } from "../components/pricing";
-import { Teams } from "../components/teams";
+
+const ContactUs = dynamic(() =>
+  import("../components/contact-us").then((m) => m.ContactUs)
+);
+const Features = dynamic(() =>
+  import("../components/features").then((m) => m.Features)
+);
+const Pricing = dynamic(() =>
+  import("../components/pricing").then((m) => m.Pricing)
+);
+const Teams = dynamic(() => import("../components/teams").then((m) => m.Teams));
 
 export default function Home() {
   return (

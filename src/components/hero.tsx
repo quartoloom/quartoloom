@@ -33,7 +33,7 @@ export function Hero({}: Props) {
   return (
     <section className=''>
       <div className='container relative mx-auto mt-28 md:mt-44 max-w-[80rem] px-6 text-center md:px-8 z-10'>
-        <motion.div
+        {/* <motion.div
           initial={{
             opacity: 0,
             y: "10px",
@@ -46,24 +46,24 @@ export function Hero({}: Props) {
             duration: 0.2,
             ease: "easeIn",
           }}
-        >
-          <h1 className='bg-gradient-to-br dark:from-primary from-primary from-30% dark:to-white/40 to-secondary bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-5xl lg:text-8xl translate-y-[-1rem] text-center'>
-            Revolutionize Your School
-            <br className='hidden md:block' /> with Quartoloom.
-          </h1>
-          <h4 className='mb-12 text-lg tracking-tight text-gray-500 md:text-xl text-balance'>
-            A Comprehensive Solution for Administrators, Teachers, Students, and
-            Parents. Manage Every Aspect of School Operations from One
-            User-Friendly Platform.
-          </h4>
-          <BookAMeeting
-            button={
-              <Button>
-                Get Started for Free <ArrowRightIcon className='ml-3 size-4' />
-              </Button>
-            }
-          />
-        </motion.div>
+        > */}
+        <h1 className='bg-gradient-to-br dark:from-primary from-primary from-30% dark:to-white/40 to-secondary bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-5xl lg:text-8xl translate-y-[-1rem] text-center'>
+          Revolutionize Your School
+          <br className='hidden md:block' /> with Quartoloom.
+        </h1>
+        <h4 className='mb-12 text-lg tracking-tight text-gray-500 md:text-xl text-balance'>
+          A Comprehensive Solution for Administrators, Teachers, Students, and
+          Parents. Manage Every Aspect of School Operations from One
+          User-Friendly Platform.
+        </h4>
+        <BookAMeeting
+          button={
+            <Button>
+              Get Started for Free <ArrowRightIcon className='ml-3 size-4' />
+            </Button>
+          }
+        />
+        {/* </motion.div>
         <motion.div
           initial={{
             opacity: 0,
@@ -79,22 +79,22 @@ export function Hero({}: Props) {
             delay: 0.1,
           }}
           className='my-[120px]'
+        > */}
+        <Div
+          containerClassName='max-w-[1300px] max-h-[700px] mx-auto'
+          className='w-full h-full z-10 relative after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background)),transparent)] after:rounded-2xl before:absolute before:-bottom-3 before:w-full before:h-12 before:bg-background before:z-[500]'
         >
-          <Div
-            containerClassName='max-w-[1300px] max-h-[700px] mx-auto'
-            className='w-full h-full z-10 relative after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background)),transparent)] after:rounded-2xl before:absolute before:-bottom-3 before:w-full before:h-12 before:bg-background before:z-[500]'
-          >
-            <img
-              src={"/app.png"}
-              className='w-full h-auto rounded-2xl border-[3px] border-gary-300 object-cover'
-            />
-            {/* <Image
+          <img
+            src={"/app.png"}
+            className='w-full h-auto rounded-2xl border-[3px] border-gary-300 object-cover'
+          />
+          {/* <Image
               className='w-full h-auto rounded-2xl border-[3px] border-gary-300'
               alt='App preview'
               fill
             ></Image> */}
-          </Div>
-        </motion.div>
+        </Div>
+        {/* </motion.div>
         <motion.div
           initial={{
             opacity: 0,
@@ -112,28 +112,28 @@ export function Hero({}: Props) {
           viewport={{
             once: true,
           }}
-        >
-          <div className='flex justify-center flex-col gap-5 mb-[120px]'>
-            <p className='capitalize text-base text-gray-500'>
-              TRUSTED BY SCOOLS FROM AROUND THE INDIA
-            </p>
-            <div className='flex justify-center items-center gap-20 mt-10'>
-              {schools.map((school) => (
-                <div
-                  className='flex justify-center items-center h-20 relative w-20'
-                  key={school.name}
-                >
-                  <Image
-                    src={school.logo}
-                    alt={school.name}
-                    fill
-                    className='object-contain '
-                  ></Image>
-                </div>
-              ))}
-            </div>
+        > */}
+        <div className='flex justify-center flex-col gap-5 mb-[120px]'>
+          <p className='capitalize text-base text-gray-500'>
+            TRUSTED BY SCOOLS FROM AROUND THE INDIA
+          </p>
+          <div className='flex justify-center items-center gap-20 mt-10'>
+            {schools.map((school) => (
+              <div
+                className='flex justify-center items-center h-20 relative w-20'
+                key={school.name}
+              >
+                <Image
+                  src={school.logo}
+                  alt={school.name}
+                  fill
+                  className='object-contain '
+                ></Image>
+              </div>
+            ))}
           </div>
-        </motion.div>
+        </div>
+        {/* </motion.div> */}
       </div>
       <BackgroundBeams />
     </section>
