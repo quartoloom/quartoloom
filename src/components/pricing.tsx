@@ -175,15 +175,15 @@ export function Pricing({}: Props) {
               >
                 <div className='flex flex-col gap-2'>
                   <div className='flex justify-between items-center'>
-                    <h4 className='text-primary font-semibold text-xl'>
+                    <h6 className='text-primary font-semibold text-xl'>
                       {item.label}
-                    </h4>
+                    </h6>
                     {/* {item.icon} */}
                   </div>
                   <div className='flex justify-start items-center gap-4'>
-                    <h3 className='bg-gradient-to-r from-slate-600 to-slate-300 bg-clip-text text-transparent text-4xl font-semibold'>
+                    <h6 className='bg-gradient-to-r from-slate-600 to-slate-300 bg-clip-text text-transparent text-4xl font-semibold'>
                       {item.price}
-                    </h3>
+                    </h6>
                     <span className='!text-gray-400 text-base'>
                       /Student <br /> for a Year
                     </span>

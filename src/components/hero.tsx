@@ -51,11 +51,11 @@ export function Hero({}: Props) {
             Revolutionize Your School
             <br className='hidden md:block' /> with Quartoloom.
           </h1>
-          <h4 className='mb-12 text-lg tracking-tight text-gray-500 md:text-xl text-balance'>
+          <p className='mb-12 text-lg tracking-tight text-gray-500 md:text-xl text-balance'>
             A Comprehensive Solution for Administrators, Teachers, Students, and
             Parents. Manage Every Aspect of School Operations from One
             User-Friendly Platform.
-          </h4>
+          </p>
           <BookAMeeting
             button={
               <Button>

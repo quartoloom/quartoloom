@@ -116,9 +116,9 @@ export function Teams({}: Props) {
                   className='!min-h-[200px] !min-w-[200px] object-cover'
                 />
                 <div>
-                  <h4 className='text-center font-semibold text-primary'>
+                  <p className='text-center font-semibold text-primary'>
                     {item.name}
-                  </h4>
+                  </p>
                   <p
                     className='text-center m-0 text-gray-500 text-sm'
                     dangerouslySetInnerHTML={{ __html: item.designation }}
