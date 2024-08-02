@@ -175,9 +175,9 @@ export function Pricing({}: Props) {
               >
                 <div className='flex flex-col gap-2'>
                   <div className='flex justify-between items-center'>
-                    <h6 className='text-primary font-semibold text-xl'>
+                    <p className='text-primary font-semibold text-xl'>
                       {item.label}
-                    </h6>
+                    </p>
                     {/* {item.icon} */}
                   </div>
                   <div className='flex justify-start items-center gap-4'>
