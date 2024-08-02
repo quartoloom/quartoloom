@@ -84,15 +84,17 @@ export function Hero({}: Props) {
             containerClassName='max-w-[1300px] max-h-[700px] mx-auto'
             className='w-full h-full z-10 relative after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background)),transparent)] after:rounded-2xl before:absolute before:-bottom-3 before:w-full before:h-12 before:bg-background before:z-[500]'
           >
-            <img
+            {/* <img
               src={"/app.webp"}
-              className='w-full h-auto rounded-2xl border-[3px] border-gary-300 object-cover'
-            />
-            {/* <Image
+              className='w-full h-auto rounded-2xl border-[3px] border-gary-300 object-cover max-w-[1300px] max-h-[700px]'
+            /> */}
+            <Image
+              width={1300}
+              height={700}
+              src={"/app.webp"}
               className='w-full h-auto rounded-2xl border-[3px] border-gary-300'
               alt='App preview'
-              fill
-            ></Image> */}
+            ></Image>
           </Div>
         </motion.div>
         <motion.div
@@ -126,7 +128,6 @@ export function Hero({}: Props) {
                   <Image
                     src={school.logo}
                     alt={school.name}
-                    fill
                     width={80}
                     height={80}
                     className='object-contain '
