@@ -9,10 +9,10 @@ export const Footer = (props: Props) => {
       <div className='flex flex-col'>
         <Image
           src={"/logo-full.png"}
-          height={40}
+          height={50}
           width={180}
           alt='Compnay Identity'
-          className='md:h-10 md:w-48 !h-6 w-36'
+          className='md:h-10 md:w-48 !h-7 w-36'
         />
         <h3 className='font-medium text-gray-500 md:text-base text-xs'>
           Where Education Meets Innovation and Creativity.

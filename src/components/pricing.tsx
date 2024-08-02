@@ -6,6 +6,7 @@ import { Check, TrendUp } from "@phosphor-icons/react";
 import { Sparkle } from "@phosphor-icons/react/Sparkle";
 import React from "react";
 import { motion } from "framer-motion";
+import { BookAMeeting } from "./book-a-meeting";
 type Props = {};
 
 const pricingCards = [
@@ -160,7 +161,7 @@ export function Pricing({}: Props) {
             ease: "easeIn",
             delay: 0.3,
           }}
-          className='grid grid-cols-1 gap-5 md:grid-cols-3'
+          className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3'
         >
           {pricingCards.map((item) => (
             <div key={item.label}>
@@ -204,9 +205,13 @@ export function Pricing({}: Props) {
                     ))}
                   </ul>
                 </div>
-                <Button variant={item.recomanded ? "default" : "ghost"}>
-                  Get Started
-                </Button>
+                <BookAMeeting
+                  button={
+                    <Button variant={item.recomanded ? "default" : "ghost"}>
+                      Get Started
+                    </Button>
+                  }
+                />
               </div>
             </div>
           ))}

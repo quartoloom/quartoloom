@@ -7,6 +7,7 @@ import Image from "next/image";
 import React from "react";
 
 import { motion } from "framer-motion";
+import { BookAMeeting } from "./book-a-meeting";
 
 let schools = [
   {
@@ -55,9 +56,13 @@ export function Hero({}: Props) {
             Parents. Manage Every Aspect of School Operations from One
             User-Friendly Platform.
           </h4>
-          <Button>
-            Get Started for Free <ArrowRightIcon className='ml-3 size-4' />
-          </Button>
+          <BookAMeeting
+            button={
+              <Button>
+                Get Started for Free <ArrowRightIcon className='ml-3 size-4' />
+              </Button>
+            }
+          />
         </motion.div>
         <motion.div
           initial={{

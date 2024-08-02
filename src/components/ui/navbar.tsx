@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "./button";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { BookAMeeting } from "../book-a-meeting";
 let navItems: {
   name: string;
   link: string;
@@ -88,10 +89,7 @@ export const Navbar = ({ className }: { className?: string }) => {
           </ul>
         </div>
         <div className='flex justify-end items-center gap-5'>
-          <Button className='rounded-full' aria-label='Book a demo button'>
-            <CalendarIcon className='mr-2 size-4' />
-            Book a Demo
-          </Button>
+          <BookAMeeting />
         </div>
       </header>
     </motion.nav>
