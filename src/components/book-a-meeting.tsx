@@ -1,6 +1,7 @@
 "use client";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogFooter,
   DialogHeader,
@@ -253,7 +254,11 @@ export const BookAMeeting = ({ button }: Props) => {
           </div>
         </div>
         <DialogFooter className='gap-5 sm:gap-0'>
-          <Button variant={"outline"}>Close</Button>
+          <DialogClose>
+            <Button className='w-full' variant={"outline"}>
+              Close
+            </Button>
+          </DialogClose>
           <Button disabled={loading} onClick={(e) => handleSubmit(e)}>
             {loading && (
               <Spinner
