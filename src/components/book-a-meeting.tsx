@@ -85,13 +85,13 @@ export const BookAMeeting = ({ button }: Props) => {
           </Button>
         )}
       </DialogTrigger>
-      <DialogContent className='max-w-[90%] sm:max-w-[600px] md:max-w-[800px]'>
+      <DialogContent className='max-w-[90%] sm:max-w-[600px] md:max-w-[800px] h-[80vh] md:h-auto'>
         <DialogHeader>
           <DialogTitle>
             Empower your school today - Book a demo now!
           </DialogTitle>
         </DialogHeader>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 my-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 my-5 overflow-y-auto'>
           <div className=' flex flex-col'>
             <label
               htmlFor='#name'
