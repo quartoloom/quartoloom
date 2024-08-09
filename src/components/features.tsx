@@ -8,6 +8,7 @@ import {
 } from "@phosphor-icons/react";
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 const Skeleton = () => (
   <div className='flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100'></div>
 );
@@ -15,6 +16,7 @@ const Skeleton = () => (
 let cards: {
   name: string;
   description: string;
+
   className?: string;
   header: ReactNode;
   icon: ReactNode;
@@ -23,7 +25,16 @@ let cards: {
     name: "Admission and Online Payment <br/> Management",
     description:
       "Simplify enrollment with online applications, secure document storage, and automated notifications, while enabling convenient, secure fee payments with real-time tracking and digital receipts for seamless financial and admission processes.",
-    header: <Skeleton />,
+    header: (
+      <div className='w-full h-[300px] relative'>
+        <Image
+          src={"/features/feature1.png"}
+          className='rounded-xl object-cover'
+          alt='Admission and Online Payment Management'
+          fill
+        />
+      </div>
+    ),
     icon: (
       <div className='flex justify-center items-center p-2 bg-secondary rounded-full'>
         <IdentificationCard className='size-6 text-primary' />
@@ -34,7 +45,16 @@ let cards: {
     name: "Student and Teacher<br/> Profile Management",
     description:
       "Maintain comprehensive profiles for students and teachers, monitor academic progress and performance, manage schedules and professional development, and facilitate seamless communication to enhance educational quality and administrative efficiency.",
-    header: <Skeleton />,
+    header: (
+      <div className='w-full h-[300px] relative'>
+        <Image
+          src={"/features/feature2.png"}
+          className='rounded-xl object-cover'
+          alt='Student and Teacher Profile Management'
+          fill
+        />
+      </div>
+    ),
     icon: (
       <div className='flex justify-center items-center p-2 bg-secondary rounded-full'>
         <Student className='size-6 text-primary' />
@@ -45,7 +65,16 @@ let cards: {
     name: "Classroom, Attendance, Results, and Announcements Management",
     description:
       "Enhance classroom efficiency with organized scheduling and student grouping, track and report attendance, manage exam results, generate progress reports, and quickly send important announcements, ensuring effective communication and optimized learning environments.",
-    header: <Skeleton />,
+    header: (
+      <div className='w-full h-[600px] relative'>
+        <Image
+          src={"/features/feature3.png"}
+          className='rounded-xl object-contain'
+          alt='Classroom, Attendance, Results, and Announcements Management'
+          fill
+        />
+      </div>
+    ),
     icon: (
       <div className='flex justify-center items-center p-2 bg-secondary rounded-full'>
         <UsersFour className='size-6 text-primary' />
@@ -57,7 +86,16 @@ let cards: {
     name: "Bulk Data Upload and Existing ERP <br/> Integration",
     description:
       "Streamline data management with bulk uploads for attendance, results, and student information, ensuring data consistency and quick updates, while seamlessly integrating with existing ERP systems for a unified and efficient school management experience.",
-    header: <Skeleton />,
+    header: (
+      <div className='w-full h-[400px] relative'>
+        <Image
+          src={"/features/feature5.png"}
+          className='rounded-xl object-cover'
+          alt='Bulk Data Upload and Existing ERP Integration'
+          fill
+        />
+      </div>
+    ),
     icon: (
       <div className='flex justify-center items-center p-2 bg-secondary rounded-full'>
         <IntersectSquare className='size-6 text-primary' />
@@ -114,6 +152,7 @@ export function Features() {
           ease: "easeIn",
           delay: 0.3,
         }}
+        className='h-max'
       >
         <BentoGrid>
           {cards.map((item, i) => (

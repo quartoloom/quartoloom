@@ -16,11 +16,11 @@ let navItems: {
     link: "/",
     id: "#home",
   },
-  {
-    name: "Team",
-    link: "/",
-    id: "#teams",
-  },
+  // {
+  //   name: "Team",
+  //   link: "/",
+  //   id: "#teams",
+  // },
   {
     name: "Features",
     link: "/",
