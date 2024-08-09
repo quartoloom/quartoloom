@@ -87,7 +87,7 @@ let cards: {
     description:
       "Streamline data management with bulk uploads for attendance, results, and student information, ensuring data consistency and quick updates, while seamlessly integrating with existing ERP systems for a unified and efficient school management experience.",
     header: (
-      <div className='w-full h-[400px] relative'>
+      <div className='w-full md:h-[400px] h-[300px] relative'>
         <Image
           src={"/features/feature5.png"}
           className='rounded-xl object-cover'

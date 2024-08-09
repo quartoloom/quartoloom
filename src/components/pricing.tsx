@@ -37,7 +37,7 @@ const pricingCards = [
   },
   {
     label: "Pro",
-    price: "220₹",
+    price: "300₹",
     for: "For small to large schools",
     features: [
       {
@@ -73,7 +73,7 @@ const pricingCards = [
   },
   {
     label: "Advance",
-    price: "250₹",
+    price: "400₹",
     for: "For small to large schools",
     features: [
       {

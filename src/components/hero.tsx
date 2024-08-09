@@ -82,7 +82,7 @@ export function Hero({}: Props) {
         >
           <Div
             containerClassName='max-w-[1300px] max-h-[700px] mx-auto'
-            className='w-full h-full z-10 relative after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background)),transparent)] after:rounded-2xl before:absolute before:-bottom-3 before:w-full before:h-12 before:bg-background before:z-[500]'
+            className='w-full h-[300px] md:h-full z-10 relative after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background)),transparent)] after:rounded-2xl before:absolute before:-bottom-3 before:w-full before:h-12 before:bg-background before:z-[500]'
           >
             {/* <img
               src={"/app.webp"}
@@ -92,7 +92,7 @@ export function Hero({}: Props) {
               width={1300}
               height={700}
               src={"/app.webp"}
-              className='w-full h-auto rounded-2xl border-[3px] border-gary-300'
+              className='w-full h-full object-cover rounded-2xl border-[3px] border-gary-300'
               alt='App preview'
               loading='lazy'
               // sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -121,10 +121,10 @@ export function Hero({}: Props) {
             <p className='capitalize text-base text-gray-500'>
               TRUSTED BY SCOOLS FROM AROUND THE INDIA
             </p>
-            <div className='flex justify-center items-center gap-20 mt-10'>
+            <div className='flex justify-center items-center gap-5 md:gap-20 mt-10'>
               {schools.map((school) => (
                 <div
-                  className='flex justify-center items-center h-20 relative w-20'
+                  className='md:h-20 relative md:w-20 h-16 w-16'
                   key={school.name}
                 >
                   <Image
@@ -132,6 +132,7 @@ export function Hero({}: Props) {
                     alt={school.name}
                     width={80}
                     height={80}
+                    className='w-full h-full'
                   ></Image>
                 </div>
               ))}
